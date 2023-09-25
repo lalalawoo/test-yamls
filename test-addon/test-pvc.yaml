@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    gitopsurl: https://bitbucket.prd.nibr.novartis.net/projects/DENG/repos/pph_ui-zephyr-deploy/browse
+  labels:
+    environment: test
+  name: reports-data-claim-test
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: nfs-storage
